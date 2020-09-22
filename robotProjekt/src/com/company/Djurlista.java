@@ -1,16 +1,18 @@
 //22/09/2020 Fredrik
 
-package projektarbetet;
+
+package com.company;
+
 
 import java.util.Scanner;
 
-public class DjurLista {
+public class Djurlista {
 
     private int quantityCheetahs;
     private int quantityZebras;
 
 
-    public DjurLista() {
+    public Djurlista() {
         this.quantityCheetahs = 0;
         this.quantityZebras = 0;
 
@@ -73,3 +75,5 @@ public class DjurLista {
     //skapa en vektor med geparder antal
 
 }
+
+
