@@ -1,3 +1,5 @@
+//22/09/2020 Fredrik
+
 package projektarbetet;
 
 import java.util.Scanner;
@@ -50,13 +52,13 @@ public class DjurLista {
 
     }
 
-    public void setVektors(Zebras[] zebras, Cheetah[] ceetah) {
+    public void setVektors(Zebra[] zebras, Gepard[] ceetah) {
 
         for (int i = 0; i < zebras.length; i++) {
-            zebras[i] = new Zebras();
+            zebras[i] = new Zebra();
         }
         for (int i = 0; i < ceetah.length; i++) {
-            ceetah[i] = new Cheetah();
+            ceetah[i] = new Gepard();
         }
 
 
