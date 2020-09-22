@@ -3,8 +3,6 @@ package com.company;
 
 import java.util.Random;
 
-
-//// 
 public class Gepard extends Djur {
     private boolean resting;
     private boolean eating;
@@ -14,8 +12,8 @@ public class Gepard extends Djur {
     int steps;
     Random rand;
 
-    public Jepard(int x, int y) {
-        super(x, y);
+    public Gepard() {
+        //super(x, y);
 
         resting = false;
         eating = false;
@@ -49,8 +47,6 @@ public class Gepard extends Djur {
     public int getSteps() {
         return steps;
     }
-
-}
 
 }
 
