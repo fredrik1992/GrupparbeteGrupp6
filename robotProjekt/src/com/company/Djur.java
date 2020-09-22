@@ -1,7 +1,3 @@
-package com.company;
-
-import java.util.Random;
-
 public abstract class Djur {
     Random random = new Random();
     int x;
