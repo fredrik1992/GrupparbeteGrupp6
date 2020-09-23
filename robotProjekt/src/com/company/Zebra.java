@@ -7,7 +7,7 @@ public class Zebra extends Djur {
 
 
     public Zebra() {
-        super(x, y);
+       
         steps = 1;
         dead = false;
 
