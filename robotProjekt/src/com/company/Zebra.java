@@ -1,4 +1,4 @@
-package com.company;
+package projektarbetet;
 
 
 public class Zebra extends Djur {
@@ -7,7 +7,7 @@ public class Zebra extends Djur {
 
 
     public Zebra() {
-       
+
         steps = 1;
         dead = false;
 
@@ -24,13 +24,23 @@ public class Zebra extends Djur {
 
     @Override
     public int getSteps() {
+        turnCounter ++;
+        setRest();
         return steps;
-    }
-
-    public void setSteps() {
 
     }
+
+    public void setRest() {
+        if (turnCounter ==1){
+            rest = true;
+            turnCounter =0;
+        }
+        else if(turnCounter == 0){
+            rest = false;
+        }
+
+    }
+
 
 
 }
-
