@@ -1,5 +1,4 @@
-package com.company;
-
+package projektarbetet;
 
 import java.util.Random;
 
@@ -45,8 +44,22 @@ public class Gepard extends Djur {
 
     @Override
     public int getSteps() {
+        turnCounter++;
+        setRest();
         return steps;
     }
+    public void restAfterEating(){
+        this.rest =true;
+    }
 
+    public void setRest() {///kolla på denna
+        if (turnCounter == 3) {
+            rest = true;
+            turnCounter = 0;
+        } else if (turnCounter != 3) {
+            rest = false;
+        }
+
+    }
 }
 
