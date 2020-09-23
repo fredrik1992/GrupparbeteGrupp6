@@ -1,7 +1,7 @@
 //22/09/2020 Fredrik
 
 
-package com.company;
+package projektarbetet;
 
 
 import java.util.Scanner;
@@ -53,6 +53,7 @@ public class Djurlista {
         }
 
     }
+    
 
     public void setVektors(Zebra[] zebras, Gepard[] ceetah) {
 
@@ -75,5 +76,3 @@ public class Djurlista {
     //skapa en vektor med geparder antal
 
 }
-
-
