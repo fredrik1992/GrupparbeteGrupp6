@@ -1,4 +1,5 @@
-package projektarbetet;
+package com.company;
+
 
 
 public class Zebra extends Djur {
@@ -9,7 +10,7 @@ public class Zebra extends Djur {
     public Zebra() {
 
         steps = 1;
-        dead = false;
+        this.dead = false;
 
     }
 
