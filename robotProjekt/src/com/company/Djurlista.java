@@ -1,7 +1,6 @@
 //22/09/2020 Fredrik
 
-
-package projektarbetet;
+package com.company;
 
 
 import java.util.Scanner;
@@ -43,7 +42,7 @@ public class Djurlista {
             System.out.println("please provide the quantity of Zeebras in the game");
             setQuantityZebras(scan.nextInt());
             System.out.println("please provide the quantity of Cheetas in the game");
-            setQuantityCheetahs(scan.nextInt());
+           setQuantityCheetahs(scan.nextInt());
             if (quantityZebras >= quantityCheetahs) {
                 System.out.println("the games is set time to play!");
                 i = true;
@@ -53,7 +52,6 @@ public class Djurlista {
         }
 
     }
-    
 
     public void setVektors(Zebra[] zebras, Gepard[] ceetah) {
 
@@ -76,3 +74,4 @@ public class Djurlista {
     //skapa en vektor med geparder antal
 
 }
+
