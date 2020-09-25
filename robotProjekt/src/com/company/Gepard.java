@@ -1,4 +1,5 @@
-package projektarbetet;
+package com.company;
+
 
 import java.util.Random;
 
@@ -62,4 +63,5 @@ public class Gepard extends Djur {
 
     }
 }
+
 
