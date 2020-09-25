@@ -18,6 +18,24 @@ stor hjälp det är att ha ett utförligt diagram då vi i slutet av dagen väld
 classerna till en fungerande enhet utan några större problem.vi valde att lämna den stora classen Ai för att kunna jobba
 tillsamans på den i de nästkommande dagarna för att knyta ihopa programmet.
 
+23/09/2020
+Dag3:johan/fredrik/Mustafa/abdullhadi/adam
+
+det första vi gjorde idag var att skriva ett stort och detaljerat Ai class diagram på tavlan med alla momement ai skulle inehålla för att få en klar bild över vad vi behövde
+implentere i classen .tex bästämde vi o lägga in en variabel runda i djur classen för o hålla koll på när det djuret behöver vila . vi har jobbat hårt med ain idag 
+och har haft en officiel skrivare  som delat sin skärm och låtit dom andra kommentera på vad som skulle codas och har fått diskutera exakt hur vår ai ska kunna 
+kontrollera alla moment i ett spels gång på ett effektivt sätt.Vid kontrollerna hade vi många olika lösningar och fick diskutera dom olika sätten o göra det på ett
+smart sätt.bland annat genom o nästa loopar.Vi tog oss igenom detta och slutförde alla kontroller som behövdes förutom flyttningsmomentet som vi lämnade till nästa dag.
+
+2020/09/25
+närvarande mustafa abdulhadi fredrik johan adam
+
+Dagen av triumf hände idag då vi lyckades få programmet att fungera som planerat.Under dagen så slutförde vi den sista
+delen av att flytta alla djuren i ai.Det var lite klurigt men efter lite ändringar fick vi det till slut att
+fungera och vi kunde äntligen trycka run knappen.Vi fann direkt ett par errors men dessa var väldigt simpla
+och  vi löste dom snabbt tillsamans.Vi la också till en grafisk del som printas när en zebra dör.Vi är alla väldigt
+glada att vi nu har ett fungerande program och att all planering i förväg hade gjort sammanfogningen mycket lätt
+
 
     
 
