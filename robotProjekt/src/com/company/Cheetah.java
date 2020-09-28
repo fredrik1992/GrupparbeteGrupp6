@@ -1,17 +1,14 @@
 package com.company;
 
-
 import java.util.Random;
 
-public class Gepard extends Djur {
+public class Cheetah extends Animals {
     private boolean resting;
     private boolean eating;
-    private int x;
-    private int y;
     int steps;
     Random rand;
 
-    public Gepard() {
+    public Cheetah() {
         resting = false;
         eating = false;
         rand = new Random();
@@ -21,23 +18,6 @@ public class Gepard extends Djur {
 
     public boolean isResting() {
         return resting;
-    }
-
-
-    public boolean isEating() {
-        return eating;
-    }
-
-    public void Eat() {
-        eating = true;
-    }
-
-    public void rest() {
-        resting = true;
-    }
-
-    public void Stop_rest() {
-        resting = false;
     }
 
     @Override
