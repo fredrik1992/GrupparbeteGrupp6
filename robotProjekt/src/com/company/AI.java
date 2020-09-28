@@ -1,19 +1,16 @@
 package com.company;
 
-
 public class AI {
-    //variabler
+    //variables
     int numberOfZebrasLeft;
     Zebra[] zebra;
     Cheetah[] cheetah;
     AnimalList list;
     int round;
 
-
     public AI() {
         list = new AnimalList();
         numberOfZebrasLeft = 0;
-
     }
 
     public void createArrays() {
@@ -22,132 +19,131 @@ public class AI {
         zebra = new Zebra[list.getQuantityZebras()];
         cheetah = new Cheetah[list.getQuantityCheetahs()];
 
-        AnimalList namn = new AnimalList();
-        namn.setVectors(zebra, cheetah);
+        AnimalList name = new AnimalList();
+        name.setVectors(zebra, cheetah);
     }
 
     public void startGame() {
         gameLoop();
-
     }
 
     public void gameLoop() {
         while (numberOfZebrasLeft > 0) {
             round++;
             System.out.println("\nRound: " + round);
-            for (int i = 0; i < zebra.length; i++) {
-                if (!zebra[i].getDead()) {
+            for (Zebra value : zebra) {
+                if (!value.getDead()) {
                     System.out.println(numberOfZebrasLeft);
 
-                    //send a object of zebra  to spelplan vektor (zebra)
-
+                    //send a object of zebra to GamePlan vector (zebra)
                 }
             }
-            for (int i = 0; i < cheetah.length; i++) {
-                if (!cheetah[i].isResting()) {
-
-                    //send a object of zebra  to spelplan vektor (zebra)
-
-                }
-            }
+            //send a object of zebra to GamePlan vector (zebra)
 
             // This loop moves all the cheetahs
-            for (int i = 0; i < cheetah.length; i++) {
-                if (cheetah[i].getDirection().equals("up")) {
-                    if (cheetah[i].getY() == 9) {
-                        while (cheetah[i].getDirection().equals("up"))
-                            cheetah[i].Direction();
-                    } else {
-                        cheetah[i].setY(cheetah[i].getSteps(), true);
-                    }
+            for (Cheetah value : cheetah) {
+                switch (value.getDirection()) {
+                    case "up":
+                        if (value.getY() == 9) {
+                            while (value.getDirection().equals("up"))
+                                value.Direction();
+                        } else {
+                            value.setY(value.getSteps(), true);
+                        }
 
-                } else if (cheetah[i].getDirection().equals("down")) {
-                    if (cheetah[i].getY() == 0) {
-                        while (cheetah[i].getDirection().equals("down"))
-                            cheetah[i].Direction();
-                    } else {
-                        cheetah[i].setY(cheetah[i].getSteps(), false);
-                    }
+                        break;
+                    case "down":
+                        if (value.getY() == 0) {
+                            while (value.getDirection().equals("down"))
+                                value.Direction();
+                        } else {
+                            value.setY(value.getSteps(), false);
+                        }
 
-                } else if (cheetah[i].getDirection().equals("left")) {
-                    if (cheetah[i].getX() == 0) {
-                        while (cheetah[i].getDirection().equals("left"))
-                            cheetah[i].Direction();
-                    } else {
-                        cheetah[i].setX(cheetah[i].getSteps(), false);
-                    }
+                        break;
+                    case "left":
+                        if (value.getX() == 0) {
+                            while (value.getDirection().equals("left"))
+                                value.Direction();
+                        } else {
+                            value.setX(value.getSteps(), false);
+                        }
 
-                } else if (cheetah[i].getDirection().equals("right")) {
-                    if (cheetah[i].getX() == 9) {
-                        while (cheetah[i].getDirection().equals("right"))
-                            cheetah[i].Direction();
-                    } else {
-                        cheetah[i].setX(cheetah[i].getSteps(), true);
-                    }
+                        break;
+                    case "right":
+                        if (value.getX() == 9) {
+                            while (value.getDirection().equals("right"))
+                                value.Direction();
+                        } else {
+                            value.setX(value.getSteps(), true);
+                        }
+                        break;
                 }
             }
 
             // This loop moves all of the zebras
-            for (int i = 0; i < zebra.length; i++) {
-                if (zebra[i].getDirection().equals("up")) {
-                    if (zebra[i].getY() == 9) {
-                        while (zebra[i].getDirection().equals("up"))
-                            zebra[i].Direction();
-                    } else {
-                        zebra[i].setY(zebra[i].getSteps(), true);
-                    }
+            for (Zebra value : zebra) {
+                switch (value.getDirection()) {
+                    case "up":
+                        if (value.getY() == 9) {
+                            while (value.getDirection().equals("up"))
+                                value.Direction();
+                        } else {
+                            value.setY(value.getSteps(), true);
+                        }
 
-                } else if (zebra[i].getDirection().equals("down")) {
-                    if (zebra[i].getY() == 0) {
-                        while (zebra[i].getDirection().equals("down"))
-                            zebra[i].Direction();
-                    } else {
-                        zebra[i].setY(zebra[i].getSteps(), false);
-                    }
+                        break;
+                    case "down":
+                        if (value.getY() == 0) {
+                            while (value.getDirection().equals("down"))
+                                value.Direction();
+                        } else {
+                            value.setY(value.getSteps(), false);
+                        }
 
-                } else if (zebra[i].getDirection().equals("left")) {
-                    if (zebra[i].getX() == 0) {
-                        while (zebra[i].getDirection().equals("left"))
-                            zebra[i].Direction();
-                    } else {
-                        zebra[i].setX(zebra[i].getSteps(), false);
-                    }
+                        break;
+                    case "left":
+                        if (value.getX() == 0) {
+                            while (value.getDirection().equals("left"))
+                                value.Direction();
+                        } else {
+                            value.setX(value.getSteps(), false);
+                        }
 
-                } else if (zebra[i].getDirection().equals("right")) {
-                    if (zebra[i].getX() == 9) {
-                        while (zebra[i].getDirection().equals("right"))
-                            zebra[i].Direction();
-                    } else {
-                        zebra[i].setX(zebra[i].getSteps(), true);
-                    }
+                        break;
+                    case "right":
+                        if (value.getX() == 9) {
+                            while (value.getDirection().equals("right"))
+                                value.Direction();
+                        } else {
+                            value.setX(value.getSteps(), true);
+                        }
+                        break;
                 }
             }
 
-            for (int j = 0; j < cheetah.length; j++) {
-                for (int i = 0; i < zebra.length; i++) {
+            for (Cheetah value : cheetah) {
+                for (Zebra item : zebra) {
                     int zebrasToPrint = 0;
 
-                    if (zebra[i].getX() == cheetah[j].getX() && zebra[i].getY() == cheetah[j].getY()) {
-                        if (zebra[i].getDead() == false && cheetah[j].isResting() == false) {
-                            zebra[i].setDead();
-                            cheetah[j].restAfterEating();
+                    if (item.getX() == value.getX() && item.getY() == value.getY()) {
+                        if (!item.getDead() && !value.isResting()) {
+                            item.setDead();
+                            value.restAfterEating();
                             numberOfZebrasLeft--;
                             zebrasToPrint++;
-
-
                         }
                     }
                     if (zebrasToPrint > 0) {
-                        printcheetah(zebrasToPrint);
-                        zebrasToPrint = 0;
+                        printCheetah(zebrasToPrint);
                     }
                 }
             }
         }
     }
 
-    public void printcheetah(int zebrasToPrint) {
-        System.out.printf("\n" +
+    public void printCheetah(int zebrasToPrint) {
+        System.out.print("\n" +
                 "\n" +
                 "\n" +
                 "\n" +
