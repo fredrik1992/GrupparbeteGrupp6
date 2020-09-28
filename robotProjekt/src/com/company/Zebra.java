@@ -1,11 +1,9 @@
 package com.company;
 
-
-public class Zebra extends Djur {
+public class Zebra extends Animals {
     private boolean dead;
     private int steps;
-
-
+    
     public Zebra() {
 
         steps = 1;
