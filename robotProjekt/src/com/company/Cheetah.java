@@ -3,14 +3,12 @@ package com.company;
 import java.util.Random;
 
 public class Cheetah extends Animals {
-    private boolean resting;
-    private boolean eating;
+    private final boolean resting;
     int steps;
     Random rand;
 
     public Cheetah() {
         resting = false;
-        eating = false;
         rand = new Random();
         steps = 1 + rand.nextInt(1);
     }
@@ -32,11 +30,11 @@ public class Cheetah extends Animals {
         this.rest = true;
     }
 
-    public void setRest() {///kolla på denna
+    public void setRest() {
         if (turnCounter == 3) {
             rest = true;
             turnCounter = 0;
-        } else if (turnCounter != 3) {
+        } else {
             rest = false;
         }
 
