@@ -1,17 +1,14 @@
-//22/09/2020 Fredrik
-
 package com.company;
-
 
 import java.util.Scanner;
 
-public class Djurlista {
+public class AnimalList {
 
     private int quantityCheetahs;
     private int quantityZebras;
 
 
-    public Djurlista() {
+    public AnimalList() {
         this.quantityCheetahs = 0;
         this.quantityZebras = 0;
 
@@ -53,13 +50,13 @@ public class Djurlista {
 
     }
 
-    public void setVektors(Zebra[] zebras, Gepard[] ceetah) {
+    public void setVectors(Zebra[] zebras, Cheetah[] cheetah) {
 
         for (int i = 0; i < zebras.length; i++) {
             zebras[i] = new Zebra();
         }
-        for (int i = 0; i < ceetah.length; i++) {
-            ceetah[i] = new Gepard();
+        for (int i = 0; i < cheetah.length; i++) {
+            cheetah[i] = new Cheetah();
         }
 
 
