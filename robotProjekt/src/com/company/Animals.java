@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Random;
 
-public abstract class Djur {
+public abstract class Animals {
     Random random = new Random();
     int x;
     int y;
@@ -13,7 +13,7 @@ public abstract class Djur {
     int turnCounter;
     boolean rest;
 
-    public Djur() {
+    public Animals() {
         x = random.nextInt(10);
         y = random.nextInt(10);
         direction = random.nextInt(4);
