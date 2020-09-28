@@ -2,8 +2,8 @@ package com.company;
 
 public class Zebra extends Animals {
     private boolean dead;
-    private int steps;
-    
+    private final int steps;
+
     public Zebra() {
 
         steps = 1;
