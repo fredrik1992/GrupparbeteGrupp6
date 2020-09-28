@@ -1,4 +1,4 @@
 package com.company;
 
-public class Spelplan {
+public class GameBoard {
 }
