@@ -6,15 +6,12 @@ import java.util.Random;
 public class Gepard extends Djur {
     private boolean resting;
     private boolean eating;
-    private int direction;
     private int x;
     private int y;
     int steps;
     Random rand;
 
     public Gepard() {
-        //super(x, y);
-
         resting = false;
         eating = false;
         rand = new Random();
@@ -47,10 +44,12 @@ public class Gepard extends Djur {
     public int getSteps() {
         turnCounter++;
         setRest();
+        Direction();
         return steps;
     }
-    public void restAfterEating(){
-        this.rest =true;
+
+    public void restAfterEating() {
+        this.rest = true;
     }
 
     public void setRest() {///kolla på denna
@@ -63,5 +62,3 @@ public class Gepard extends Djur {
 
     }
 }
-
-
