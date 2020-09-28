@@ -1,7 +1,6 @@
 package com.company;
 
 
-
 public class Zebra extends Djur {
     private boolean dead;
     private int steps;
@@ -25,23 +24,20 @@ public class Zebra extends Djur {
 
     @Override
     public int getSteps() {
-        turnCounter ++;
+        turnCounter++;
         setRest();
+        Direction();
         return steps;
 
     }
 
     public void setRest() {
-        if (turnCounter ==1){
+        if (turnCounter == 1) {
             rest = true;
-            turnCounter =0;
-        }
-        else if(turnCounter == 0){
+            turnCounter = 0;
+        } else if (turnCounter == 0) {
             rest = false;
         }
 
     }
-
-
-
 }
