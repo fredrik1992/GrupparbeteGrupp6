@@ -5,13 +5,13 @@ public class AI {
     //variabler
     int numberOfZebrasLeft;
     Zebra[] zebra;
-    Gepard[] gepard;
-    Djurlista list;
+    Cheetah[] cheetah;
+    AnimalList list;
     int round;
 
 
     public AI() {
-        list = new Djurlista();
+        list = new AnimalList();
         numberOfZebrasLeft = 0;
 
     }
@@ -20,10 +20,10 @@ public class AI {
         list.getInputOnAnimalQuantity();
         numberOfZebrasLeft = list.getQuantityZebras();
         zebra = new Zebra[list.getQuantityZebras()];
-        gepard = new Gepard[list.getQuantityCheetahs()];
+        cheetah = new Cheetah[list.getQuantityCheetahs()];
 
-        Djurlista namn = new Djurlista();
-        namn.setVektors(zebra, gepard);
+        AnimalList namn = new AnimalList();
+        namn.setVectors(zebra, cheetah);
     }
 
     public void startGame() {
@@ -36,15 +36,15 @@ public class AI {
             round++;
             System.out.println("\nRound: " + round);
             for (int i = 0; i < zebra.length; i++) {
-                if (zebra[i].getDead() == false) {
+                if (!zebra[i].getDead()) {
                     System.out.println(numberOfZebrasLeft);
 
                     //send a object of zebra  to spelplan vektor (zebra)
 
                 }
             }
-            for (int i = 0; i < gepard.length; i++) {
-                if (gepard[i].isResting() == false) {
+            for (int i = 0; i < cheetah.length; i++) {
+                if (!cheetah[i].isResting()) {
 
                     //send a object of zebra  to spelplan vektor (zebra)
 
@@ -52,37 +52,37 @@ public class AI {
             }
 
             // This loop moves all the cheetahs
-            for (int i = 0; i < gepard.length; i++) {
-                if (gepard[i].getDirection().equals("up")) {
-                    if (gepard[i].getY() == 9) {
-                        while (gepard[i].getDirection().equals("up"))
-                            gepard[i].Direction();
+            for (int i = 0; i < cheetah.length; i++) {
+                if (cheetah[i].getDirection().equals("up")) {
+                    if (cheetah[i].getY() == 9) {
+                        while (cheetah[i].getDirection().equals("up"))
+                            cheetah[i].Direction();
                     } else {
-                        gepard[i].setY(gepard[i].getSteps(), true);
+                        cheetah[i].setY(cheetah[i].getSteps(), true);
                     }
 
-                } else if (gepard[i].getDirection().equals("down")) {
-                    if (gepard[i].getY() == 0) {
-                        while (gepard[i].getDirection().equals("down"))
-                            gepard[i].Direction();
+                } else if (cheetah[i].getDirection().equals("down")) {
+                    if (cheetah[i].getY() == 0) {
+                        while (cheetah[i].getDirection().equals("down"))
+                            cheetah[i].Direction();
                     } else {
-                        gepard[i].setY(gepard[i].getSteps(), false);
+                        cheetah[i].setY(cheetah[i].getSteps(), false);
                     }
 
-                } else if (gepard[i].getDirection().equals("left")) {
-                    if (gepard[i].getX() == 0) {
-                        while (gepard[i].getDirection().equals("left"))
-                            gepard[i].Direction();
+                } else if (cheetah[i].getDirection().equals("left")) {
+                    if (cheetah[i].getX() == 0) {
+                        while (cheetah[i].getDirection().equals("left"))
+                            cheetah[i].Direction();
                     } else {
-                        gepard[i].setX(gepard[i].getSteps(), false);
+                        cheetah[i].setX(cheetah[i].getSteps(), false);
                     }
 
-                } else if (gepard[i].getDirection().equals("right")) {
-                    if (gepard[i].getX() == 9) {
-                        while (gepard[i].getDirection().equals("right"))
-                            gepard[i].Direction();
+                } else if (cheetah[i].getDirection().equals("right")) {
+                    if (cheetah[i].getX() == 9) {
+                        while (cheetah[i].getDirection().equals("right"))
+                            cheetah[i].Direction();
                     } else {
-                        gepard[i].setX(gepard[i].getSteps(), true);
+                        cheetah[i].setX(cheetah[i].getSteps(), true);
                     }
                 }
             }
@@ -123,21 +123,21 @@ public class AI {
                 }
             }
 
-            for (int j = 0; j < gepard.length; j++) {
+            for (int j = 0; j < cheetah.length; j++) {
                 for (int i = 0; i < zebra.length; i++) {
-                    int zebrasToPrint=0;
+                    int zebrasToPrint = 0;
 
-                    if (zebra[i].getX() == gepard[j].getX() && zebra[i].getY() == gepard[j].getY()) {
-                        if (zebra[i].getDead() == false && gepard[j].isResting() == false) {
+                    if (zebra[i].getX() == cheetah[j].getX() && zebra[i].getY() == cheetah[j].getY()) {
+                        if (zebra[i].getDead() == false && cheetah[j].isResting() == false) {
                             zebra[i].setDead();
-                            gepard[j].restAfterEating();
+                            cheetah[j].restAfterEating();
                             numberOfZebrasLeft--;
                             zebrasToPrint++;
 
 
                         }
                     }
-                    if(zebrasToPrint>0) {
+                    if (zebrasToPrint > 0) {
                         printcheetah(zebrasToPrint);
                         zebrasToPrint = 0;
                     }
@@ -145,7 +145,8 @@ public class AI {
             }
         }
     }
-    public void printcheetah(int zebrasToPrint){
+
+    public void printcheetah(int zebrasToPrint) {
         System.out.printf("\n" +
                 "\n" +
                 "\n" +
@@ -177,24 +178,5 @@ public class AI {
                 "                                                                         \\ ____\\                                                                        \n" +
                 "                                                                             ");
         System.out.printf("%d", zebrasToPrint);
-
     }
-
 }
-
-
-    /*for gepard[i]
-        for  zebra[i]
-            while (xebra gepad x,y && gepar.vila false)
-            zebra (i).set(true)
-            if gepard != vilar &&zebra !=död
-     */
-
-//äta
-//gå
-
-
-//ha
-
-
-//constructor
