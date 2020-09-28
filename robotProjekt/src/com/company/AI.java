@@ -7,6 +7,7 @@ public class AI {
     Zebra[] zebra;
     Gepard[] gepard;
     Djurlista list;
+    int round;
 
 
     public AI() {
@@ -32,6 +33,8 @@ public class AI {
 
     public void gameLoop() {
         while (numberOfZebrasLeft > 0) {
+            round++;
+            System.out.println("\nRound: " + round);
             for (int i = 0; i < zebra.length; i++) {
                 if (zebra[i].getDead() == false) {
                     System.out.println(numberOfZebrasLeft);
@@ -122,21 +125,63 @@ public class AI {
 
             for (int j = 0; j < gepard.length; j++) {
                 for (int i = 0; i < zebra.length; i++) {
+                    int zebrasToPrint=0;
 
                     if (zebra[i].getX() == gepard[j].getX() && zebra[i].getY() == gepard[j].getY()) {
                         if (zebra[i].getDead() == false && gepard[j].isResting() == false) {
                             zebra[i].setDead();
                             gepard[j].restAfterEating();
                             numberOfZebrasLeft--;
+                            zebrasToPrint++;
 
 
                         }
+                    }
+                    if(zebrasToPrint>0) {
+                        printcheetah(zebrasToPrint);
+                        zebrasToPrint = 0;
                     }
                 }
             }
         }
     }
+    public void printcheetah(int zebrasToPrint){
+        System.out.printf("\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "                                                                                                                                        _____\n" +
+                "                                                                                                                                      _/ _ _ \\\n" +
+                "                                                                                                                                     /    \\ \\_\\__\n" +
+                "                                                                                                                               _____/    /(      \\\n" +
+                "                                                                                                                              |  _______/         \\\n" +
+                "                                                                                                                             _| /                  \\     \n" +
+                "                                                                                                                ____________|__/                    \\\n" +
+                "                                                                                                               /                            __       \\   \n" +
+                "                                                         _____________/\\____                                __/                            /   \\      | \n" +
+                "  ---                        __________                 /             \\/    \\___                           /                              |     \\____/ \n" +
+                "  | |                       |          \\_______________/                        )                         /                               |          \n" +
+                "  | |          -------------                                            \\______/                   ______/                      /         /\n" +
+                "  \\ \\         / -----------                                             /                         / _____                      /         /\n" +
+                "   \\ \\-------/ /          /                                            /              -- ________/ /   /                       |        /______\n" +
+                "    ----------/          /                                            |               \\___________/    |       _____            \\      _____   \\   \n" +
+                "                  ______/        ____                                \\|                                |      /    \\_____________\\          \\   \\\n" +
+                "                 /              /    \\___                             \\                                |     /     /              \\________  |   \\\n" +
+                "                /              /         \\_______________________|     \\                              /     /     /                        | |\\  |\n" +
+                "               /  ____________/                                  |      \\_________                   /   __/  ___|                         | | \\ |\n" +
+                "              (  /                                                \\_____________  \\                 /   /    /                             | | / /\n" +
+                "           ___| /                                                  \\    \\       |  \\             __/  _//___/                              / /  /\n" +
+                "          |   _/                                                    \\__  \\      |   |           /    /                                   |  /\\__|\n" +
+                "          \\/_/                                                         \\  \\      \\ /           /____/                                    \\__|\n" +
+                "                                                                        \\  \\__\n" +
+                "                                                                         \\ ____\\                                                                        \n" +
+                "                                                                             ");
+        System.out.printf("%d", zebrasToPrint);
+
+    }
+
 }
+
 
     /*for gepard[i]
         for  zebra[i]
