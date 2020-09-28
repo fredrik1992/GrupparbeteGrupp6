@@ -1,5 +1,6 @@
 package com.company;
 
+
 import java.util.Scanner;
 
 public class AnimalList {
@@ -35,11 +36,11 @@ public class AnimalList {
     public void getInputOnAnimalQuantity() {
         Scanner scan = new Scanner(System.in);
         boolean i = false;
-        while (i == false) {
+        while (!i) {
             System.out.println("please provide the quantity of Zeebras in the game");
             setQuantityZebras(scan.nextInt());
             System.out.println("please provide the quantity of Cheetas in the game");
-           setQuantityCheetahs(scan.nextInt());
+            setQuantityCheetahs(scan.nextInt());
             if (quantityZebras >= quantityCheetahs) {
                 System.out.println("the games is set time to play!");
                 i = true;
@@ -71,4 +72,3 @@ public class AnimalList {
     //skapa en vektor med geparder antal
 
 }
-
