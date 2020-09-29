@@ -36,6 +36,12 @@ fungera och vi kunde äntligen trycka run knappen.Vi fann direkt ett par errors 
 och  vi löste dom snabbt tillsamans.Vi la också till en grafisk del som printas när en zebra dör.Vi är alla väldigt
 glada att vi nu har ett fungerande program och att all planering i förväg hade gjort sammanfogningen mycket lätt
 
+2020/09/25
+närvarande mustafa abdulhadi fredrik johan adam
+Då vårat program är klart gjorde vi inte så mycket idag vi hade gjort olika versioner av spelplanen som vi kunde testa och hittade några små fel
+i koden som hindrade djuren ifrån att rör sig rätt som vi snabbt fixade med hjälp av debuggern.Utöver det så spenderade vi största delen av tiden med att
+gå igenom koderna så att alla förstod exakt vad som hände och skriva in kommentarer till dom olika metoderna .
+
 
     
 
