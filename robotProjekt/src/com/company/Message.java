@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class Message {
     Random random = new Random();
-    int val;
+    int death;
     String returnChoice;
 
 
 
     public Message(){
-        val = random.nextInt(7);
+        death = random.nextInt(7);
     }
 
 
@@ -19,7 +19,7 @@ public class Message {
 
     public String Choice() {
 
-        switch (val) {
+        switch (death) {
             case 0:
                 returnChoice = "A young foal got eaten by a low ranked cheetha!";
                 break;
@@ -54,8 +54,6 @@ public class Message {
 
     }
 }
-
-
 
 
 
