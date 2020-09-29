@@ -143,6 +143,9 @@ public class AI {
     }
 
     public void printCheetah(int zebrasToPrint) {
+        Message m = new Message();
+        String message = m.Choice();
+
         System.out.print("\n" +
                 "\n" +
                 "\n" +
@@ -173,6 +176,6 @@ public class AI {
                 "                                                                        \\  \\__\n" +
                 "                                                                         \\ ____\\                                                                        \n" +
                 "                                                                             ");
-        System.out.printf("%d", zebrasToPrint);
+        System.out.printf("%s", message);
     }
 }
