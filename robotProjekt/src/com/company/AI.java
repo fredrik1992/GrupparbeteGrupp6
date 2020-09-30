@@ -16,7 +16,7 @@ public class AI {
     }
 
 
-    public void createVectors() {//this whole method is used to give our vectors a size and give them objects
+    public void createArrays() {//this whole method is used to give our vectors a size and give them objects
         list.getInputOnAnimalQuantity();//using the list object we call on the method getQuantity and sets values for zebras and cheetas
         numberOfZebrasLeft = list.getQuantityZebras();//assigns the total number of zebras  alive at the start of the game
 
