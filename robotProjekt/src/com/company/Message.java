@@ -10,7 +10,7 @@ public class Message {
 
 
     public Message(){
-        death = random.nextInt(7);
+        death = random.nextInt(8);
     }
 
 
@@ -21,11 +21,11 @@ public class Message {
 
         switch (death) {
             case 0:
-                returnChoice = "A young foal got eaten by a low ranked cheetha!";
+                returnChoice = "A young foal got eaten by a low ranked cheetah!";
                 break;
 
             case 1:
-                returnChoice = "The alfa-cheetha eating raw liver, poor zebra!";
+                returnChoice = "The alfa-cheetah eating raw liver, poor zebra!";
                 break;
 
             case 2:
@@ -41,11 +41,14 @@ public class Message {
                 break;
 
             case 5:
-                returnChoice = "A young cheetha whit a killer instinct showing excellent hunting skills, poor zebra...";
+                returnChoice = "A young cheetah whit a killer instinct showing excellent hunting skills, poor zebra...";
                 break;
 
             case 6:
                 returnChoice = "Eeny meeny miny mo - one more zebra had to go!";
+                break;
+            case 7 :
+                returnChoice = "A young zebra got separated from the herd and ...";
                 break;
 
         }
@@ -54,8 +57,6 @@ public class Message {
 
     }
 }
-
-
 
 
 
