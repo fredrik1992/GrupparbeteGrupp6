@@ -33,15 +33,15 @@ public class AnimalList {
         return quantityZebras;
     }
 
-    public void getInputOnAnimalQuantity() {
+    public void getInputOnAnimalQuantity() {// takes two inputs and gives them to quantity of zebras and cheetahs
         Scanner scan = new Scanner(System.in);
         boolean i = false;
-        while (!i) {
+        while (i == false) {
             System.out.println("please provide the quantity of Zeebras in the game");
             setQuantityZebras(scan.nextInt());
             System.out.println("please provide the quantity of Cheetas in the game");
             setQuantityCheetahs(scan.nextInt());
-            if (quantityZebras >= quantityCheetahs) {
+            if (quantityZebras >= quantityCheetahs) {//checks that zebras are never less then cheetahs
                 System.out.println("the games is set time to play!");
                 i = true;
 
@@ -51,7 +51,7 @@ public class AnimalList {
 
     }
 
-    public void setVectors(Zebra[] zebras, Cheetah[] cheetah) {
+    public void setArrays(Zebra[] zebras, Cheetah[] cheetah) {//takes two vectors and give them values
 
         for (int i = 0; i < zebras.length; i++) {
             zebras[i] = new Zebra();
@@ -64,11 +64,5 @@ public class AnimalList {
     }
 
 
-    //kommer ifrån ai input antal;int, input antal geparder:int
-    //zebror måste vara fler eller lika med geoparder
-
-
-    //skapa en vektor med sebror antal
-    //skapa en vektor med geparder antal
-
 }
+
