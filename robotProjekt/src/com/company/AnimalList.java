@@ -1,6 +1,8 @@
 package com.company;
 
 
+package projektarbetet;
+
 import java.util.Scanner;
 
 public class AnimalList {
@@ -41,11 +43,13 @@ public class AnimalList {
             setQuantityZebras(scan.nextInt());
             System.out.println("please provide the quantity of Cheetas in the game");
             setQuantityCheetahs(scan.nextInt());
-            if (quantityZebras >= quantityCheetahs) {//checks that zebras are never less then cheetahs
+            if (quantityZebras >= quantityCheetahs && quantityCheetahs > 0) {//checks that zebras are never less then cheetahs
                 System.out.println("the games is set time to play!");
                 i = true;
 
 
+            } else {System.out.printf("you have entered the wrong number of cheetahs give a number that is not 0" +
+                    "and is less or equal to the number of zebras %n");
             }
         }
 
@@ -65,4 +69,3 @@ public class AnimalList {
 
 
 }
-
