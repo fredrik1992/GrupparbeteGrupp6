@@ -8,6 +8,8 @@ public class AI {
     AnimalList list;
     int round;
 
+    GameBoard plan;  /// gameBoard object
+    
     public AI() {
         list = new AnimalList();
         numberOfZebrasLeft = 0;
@@ -177,5 +179,9 @@ public class AI {
                 "                                                                         \\ ____\\                                                                        \n" +
                 "                                                                             ");
         System.out.printf("%s", message);
+        
+        //// GameBoard print
+         System.out.println("");
+        plan.print();
     }
 }
