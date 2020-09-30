@@ -7,15 +7,9 @@ public class Message {
     int death;
     String returnChoice;
 
-
-
     public Message(){
         death = random.nextInt(8);
     }
-
-
-
-
 
     public String Choice() {
 
@@ -29,7 +23,7 @@ public class Message {
                 break;
 
             case 2:
-                returnChoice = "A zebra zigged when it should zaged, poor zebra!";
+                returnChoice = "A zebra zigged when it should have zaged, poor zebra!";
                 break;
 
             case 3:
@@ -37,7 +31,7 @@ public class Message {
                 break;
 
             case 4:
-                returnChoice = "Sorry buddy, to slow...";
+                returnChoice = "Sorry buddy, too slow...";
                 break;
 
             case 5:
@@ -47,6 +41,7 @@ public class Message {
             case 6:
                 returnChoice = "Eeny meeny miny mo - one more zebra had to go!";
                 break;
+                
             case 7 :
                 returnChoice = "A young zebra got separated from the herd and ...";
                 break;
