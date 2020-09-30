@@ -41,7 +41,7 @@ public class Message {
                 break;
 
             case 5:
-                returnChoice = "A young cheetah whit a killer instinct showing excellent hunting skills, poor zebra...";
+                returnChoice = "A young cheetah with a killer instinct showing excellent hunting skills, poor zebra...";
                 break;
 
             case 6:
