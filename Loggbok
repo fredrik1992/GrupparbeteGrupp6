@@ -9,7 +9,7 @@ men vi kom snabbt in i det och uppskattar dess smidighet enormt .
 
 22/09/2020
 Dag2:
-närvarande:abdhulhadei på plats/fredrik på plats /adam/på plats / mustafa sjuks/  ////22september
+närvarande:abdhulhadei på plats/fredrik på plats /adam/på plats / mustafa sjuks/ Jonas ////22september
 
 protokoll:idag har vi lagt klart planen för diagrammet  och muntligt gått igenom dess kompenenter och hur det fungerar tillsamans.
 Efter detta delade vi upp program classerna till var och en som vi sedan inviduellt kunde jobba på.Under kodningen
@@ -19,7 +19,7 @@ classerna till en fungerande enhet utan några större problem.vi valde att läm
 tillsamans på den i de nästkommande dagarna för att knyta ihopa programmet.
 
 23/09/2020
-Dag3:johan/fredrik/Mustafa/abdullhadi/adam
+Dag3:jonas/fredrik/Mustafa/abdullhadi/adam
 
 det första vi gjorde idag var att skriva ett stort och detaljerat Ai class diagram på tavlan med alla momement ai skulle inehålla för att få en klar bild över vad vi behövde
 implentere i classen .tex bästämde vi o lägga in en variabel runda i djur classen för o hålla koll på när det djuret behöver vila . vi har jobbat hårt med ain idag 
@@ -28,7 +28,7 @@ kontrollera alla moment i ett spels gång på ett effektivt sätt.Vid kontroller
 smart sätt.bland annat genom o nästa loopar.Vi tog oss igenom detta och slutförde alla kontroller som behövdes förutom flyttningsmomentet som vi lämnade till nästa dag.
 
 2020/09/25
-närvarande mustafa abdulhadi fredrik johan adam
+närvarande mustafa abdulhadi fredrik jonas adam
 
 Dagen av triumf hände idag då vi lyckades få programmet att fungera som planerat.Under dagen så slutförde vi den sista
 delen av att flytta alla djuren i ai.Det var lite klurigt men efter lite ändringar fick vi det till slut att
@@ -37,7 +37,7 @@ och  vi löste dom snabbt tillsamans.Vi la också till en grafisk del som printa
 glada att vi nu har ett fungerande program och att all planering i förväg hade gjort sammanfogningen mycket lätt
 
 2020/09/25
-närvarande mustafa abdulhadi fredrik johan adam
+närvarande mustafa abdulhadi fredrik jonas adam
 Då vårat program är klart gjorde vi inte så mycket idag vi hade gjort olika versioner av spelplanen som vi kunde testa och hittade några små fel
 i koden som hindrade djuren ifrån att rör sig rätt som vi snabbt fixade med hjälp av debuggern.Utöver det så spenderade vi största delen av tiden med att
 gå igenom koderna så att alla förstod exakt vad som hände och skriva in kommentarer till dom olika metoderna .
